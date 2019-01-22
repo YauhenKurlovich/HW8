@@ -128,6 +128,19 @@ $("#Search").click(function(){
       });
 })
 
+$("#expand").click(function(){
+    $.ajax({
+        url: 'https://services.odata.org/V4/(S(1pdpon0x4s4l4fndqdzmqgde))/TripPinServiceRW/Photos?$expand=People',
+        success: function(Photos){
+             $("#tableBody").empty();
+        },
+        error: function(){
+            alert("Service is BAD (Expand for People is not work)");
+        }
+        
+      });
+})
+
 display = function (data) {
     $("#tableBody").append("<tr><td>" + data.Id + "</td><td>" + data.Name + "</td></tr>");
 }
