@@ -67,6 +67,18 @@ $("#getSkip").click(function(){
       });
 })
 
+$("#getFilter").click(function(){
+    $.ajax({
+        url: 'https://services.odata.org/V4/(S(acze1vtlgzqgqwuyfzdby2wy))/TripPinServiceRW/Photos?$filter=Id ge '+$("#gt").val(),
+        success: function(Photos){
+             $("#tableBody").empty();
+            for (var i = 0; i < Photos.value.length; i++) {
+                display(Photos.value[i]);
+            }
+        }
+      });
+})
+
 display = function (data) {
     $("#tableBody").append("<tr><td>" + data.Id + "</td><td>" + data.Name + "</td></tr>");
 }
