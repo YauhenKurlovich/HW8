@@ -67,9 +67,33 @@ $("#getSkip").click(function(){
       });
 })
 
+$("#getSkip").click(function(){
+    $.ajax({
+        url: 'https://services.odata.org/V4/(S(acze1vtlgzqgqwuyfzdby2wy))/TripPinServiceRW/Photos?$skip='+$("#skipCount").val(),
+        success: function(Photos){
+             $("#tableBody").empty();
+            for (var i = 0; i < Photos.value.length; i++) {
+                display(Photos.value[i]);
+            }
+        }
+      });
+})
+
 $("#getFilter").click(function(){
     $.ajax({
         url: 'https://services.odata.org/V4/(S(acze1vtlgzqgqwuyfzdby2wy))/TripPinServiceRW/Photos?$filter=Id ge '+$("#gt").val(),
+        success: function(Photos){
+             $("#tableBody").empty();
+            for (var i = 0; i < Photos.value.length; i++) {
+                display(Photos.value[i]);
+            }
+        }
+      });
+})
+
+$("#Filterx3").click(function(){
+    $.ajax({
+        url: 'https://services.odata.org/V4/(S(acze1vtlgzqgqwuyfzdby2wy))/TripPinServiceRW/Photos?$filter=Id ge '+$("#ge").val() + ' and Id ne ' +$("#ne").val() + ' and Id le ' + $("#le").val(),
         success: function(Photos){
              $("#tableBody").empty();
             for (var i = 0; i < Photos.value.length; i++) {
