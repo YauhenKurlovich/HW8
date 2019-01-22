@@ -1,0 +1,15 @@
+body{
+    background-color: black;
+    color:white;
+}
+
+table,td{
+    border-style: solid;
+    border-color:white;
+    border-width: 2px;
+}
+
+button{
+    background-color: blueviolet;
+    color:white;
+}
