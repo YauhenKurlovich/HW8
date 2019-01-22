@@ -3,6 +3,9 @@ $("#count").click(function(){
         url: 'https://services.odata.org/V4/(S(acze1vtlgzqgqwuyfzdby2wy))/TripPinServiceRW/Photos/$count',
         success: function(countPhotos){
           alert(countPhotos + ' photos');
+        },
+        error: function(){
+            alert("Some Error");
         }
       });
 })
@@ -15,6 +18,9 @@ $("#selectAll").click(function(){
             for (var i = 0; i < Photos.value.length; i++) {
                 display(Photos.value[i]);
             }
+        },
+        error: function(){
+            alert("Some Error");
         }
       });
 })
@@ -27,6 +33,9 @@ $("#orderASC").click(function(){
             for (var i = 0; i < Photos.value.length; i++) {
                 display(Photos.value[i]);
             }
+        },
+        error: function(){
+            alert("Some Error");
         }
       });
 })
@@ -39,6 +48,9 @@ $("#orderDESC").click(function(){
             for (var i = 0; i < Photos.value.length; i++) {
                 display(Photos.value[i]);
             }
+        },
+        error: function(){
+            alert("Some Error");
         }
       });
 })
@@ -51,6 +63,9 @@ $("#getTop").click(function(){
             for (var i = 0; i < Photos.value.length; i++) {
                 display(Photos.value[i]);
             }
+        },
+        error: function(){
+            alert("Some Error");
         }
       });
 })
@@ -63,6 +78,9 @@ $("#getSkip").click(function(){
             for (var i = 0; i < Photos.value.length; i++) {
                 display(Photos.value[i]);
             }
+        },
+        error: function(){
+            alert("Some Error");
         }
       });
 })
@@ -75,6 +93,9 @@ $("#getSkip").click(function(){
             for (var i = 0; i < Photos.value.length; i++) {
                 display(Photos.value[i]);
             }
+        },
+        error: function(){
+            alert("Some Error");
         }
       });
 })
@@ -87,6 +108,9 @@ $("#getFilter").click(function(){
             for (var i = 0; i < Photos.value.length; i++) {
                 display(Photos.value[i]);
             }
+        },
+        error: function(){
+            alert("Some Error");
         }
       });
 })
@@ -99,6 +123,9 @@ $("#Filterx3").click(function(){
             for (var i = 0; i < Photos.value.length; i++) {
                 display(Photos.value[i]);
             }
+        },
+        error: function(){
+            alert("Some Error");
         }
       });
 })
